@@ -6,10 +6,10 @@ import {
     Routes
 } from 'react-router-dom';
 
-import {AboutPageAsync} from "./pages/AboutPage/AboutPage.async";
-import {MainPageAsync} from "./pages/MainPage/MainPage.async";
-import {UseTheme} from "./theme/useTheme";
-import {classNames} from "./helpers/classNames/classNames";
+import {AboutPageAsync} from "pages/AboutPage";
+import {MainPageAsync} from "pages/MainPage";
+import {UseTheme} from "app/providers/ThemePropvider";
+import {classNames} from "shared/lib/classNames/classNames";
 
 const App = () => {
     const {theme, toggleTheme} = UseTheme();
