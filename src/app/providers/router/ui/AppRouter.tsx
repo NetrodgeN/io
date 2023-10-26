@@ -14,7 +14,11 @@ export const AppRouter = () => {
                     .map(({element, path})=>(
                     <Route
                         key={path}
-                        element={element}
+                        element={(
+                            <div className="page-wrapper">
+                               {element}
+                            </div>
+                        )}
                         path={path}
                     />
                 ))}

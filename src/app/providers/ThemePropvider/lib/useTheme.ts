@@ -10,7 +10,7 @@ interface UseThemeResult {
     theme: Theme;
 }
 
-export function UseTheme (): UseThemeResult {
+export function useTheme (): UseThemeResult {
 
     const {theme, setTheme} = React.useContext(ThemeContext);
 
@@ -26,4 +26,4 @@ export function UseTheme (): UseThemeResult {
     }
 }
 
-UseTheme.displayName = 'UseTheme';
+useTheme.displayName = 'useTheme';
