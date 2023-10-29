@@ -6,6 +6,7 @@ module.exports = {
     extends: [
         'plugin:react/recommended',
         'airbnb',
+        'plugin:i18next/recommended',
     ],
     parser: '@typescript-eslint/parser',
     parserOptions: {
@@ -18,6 +19,7 @@ module.exports = {
     plugins: [
         'react',
         '@typescript-eslint',
+        'i18next',
     ],
     rules: {
     // 2 - это warning, identMode 4 - отступ равен 4 пробелам
@@ -47,6 +49,7 @@ module.exports = {
         'jsx-a11y/label-has-associated-control': 'off',
         'jsx-a11y/click-events-have-key-events': 'off',
         'jsx-a11y/no-noninteractive-element-interactions': 'off',
+        'i18next/no-literal-string': ['error', { markupOnly: true }],
     },
     globals: {
         __IS_DEV__: true,
