@@ -2,6 +2,7 @@ module.exports = {
     env: {
         browser: true,
         es2021: true,
+        jest: true,
     },
     extends: [
         'plugin:react/recommended',
@@ -28,7 +29,9 @@ module.exports = {
         'react/jsx-indent': [2, 4],
         'react/jsx-indent-props': [2, 4],
         indent: [2, 4],
-        'react/jsx-filename-extension': [2, { extensions: ['.js', '.jsx', '.tsx'] }],
+        'react/jsx-filename-extension': [
+            2,
+            { extensions: ['.js', '.jsx', '.tsx'] }],
         // в проекте используются относительные пути
         'import/no-unresolved': 'off',
         // правило указывать расширение пути. Но вебпак уже настроен и правило не нужно
@@ -50,6 +53,8 @@ module.exports = {
         'jsx-a11y/click-events-have-key-events': 'off',
         'jsx-a11y/no-noninteractive-element-interactions': 'off',
         'i18next/no-literal-string': ['error', { markupOnly: true }],
+
+        'max-len': ['error', { ignoreComments: true }],
     },
     globals: {
         __IS_DEV__: true,
