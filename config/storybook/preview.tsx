@@ -17,7 +17,7 @@ const preview: Preview = {
     globalTypes: {
         theme: {
             description: 'Global theme for components',
-            defaultValue: Theme.LIGHT,
+            defaultValue: 'side-by-side',
             toolbar: {
                 title: 'Global theme',
                 items: [Theme.LIGHT, Theme.DARK, 'side-by-side'],
