@@ -2,6 +2,7 @@
  * For a detailed explanation regarding each configuration property and type check, visit:
  * https://jestjs.io/docs/configuration
  */
+import path from 'path';
 
 export default {
     // All imported modules in your tests should be mocked automatically
@@ -21,10 +22,15 @@ export default {
     coveragePathIgnorePatterns: [
         '\\\\node_modules\\\\',
     ],
-
+    // Корневой каталог, в котором Jest должен сканировать тесты и модули внутри.
+    rootDir: '../../',
     // Массив имен каталогов для рекурсивного поиска от местоположения требуемого модуля
     moduleDirectories: [
         'node_modules',
+    ],
+
+    modulePaths: [
+        '<rootDir>src',
     ],
 
     // Массив расширений файлов, которые используют ваши модули
@@ -36,8 +42,12 @@ export default {
         'json',
         'node',
     ],
-    // Корневой каталог, в котором Jest должен сканировать тесты и модули внутри.
-    rootDir: '../../',
+
+    setupFilesAfterEnv: ['<rootDir>config/jest/setupTests.ts'],
+    moduleNameMapper: {
+        '\\.(s?css)$': 'identity-obj-proxy',
+        '\\.svg': path.resolve(__dirname, 'jestEmptyComponent'),
+    },
     // Шаблоны glob, которые Jest использует для обнаружения тестовых файлов
     testMatch: [
         '<rootDir>src/**/*(*.)@(spec|test).[tj]s?(x)',
