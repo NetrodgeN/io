@@ -3,11 +3,7 @@ import React from 'react';
 import { useTheme } from 'app/providers/ThemePropvider';
 import cls from './ThemeSwitcher.module.scss';
 
-interface ThemeSwitcherProps {
-    className?: string;
-}
-
-export const ThemeSwitcher = ({ className }: ThemeSwitcherProps) => {
+export const ThemeSwitcher = () => {
     const { toggleTheme } = useTheme();
 
     return (
