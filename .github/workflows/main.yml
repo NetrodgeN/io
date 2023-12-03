@@ -2,9 +2,9 @@ name: linting, testing, building
 
 on:
   push:
-    branches: [ master ]
+    branches: [ dev ]
   pull_request:
-    branches: [ master ]
+    branches: [ dev ]
 
 jobs:
   pipeline:
