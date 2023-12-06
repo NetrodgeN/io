@@ -1,7 +1,7 @@
 import React from 'react';
 
-export const JestEmptyComponent = () => (
+const JestEmptyComponent = () => (
     <div />
 );
 
-JestEmptyComponent.displayName = 'JestEmptyComponent';
+export default JestEmptyComponent;

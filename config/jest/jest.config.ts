@@ -46,7 +46,7 @@ export default {
     setupFilesAfterEnv: ['<rootDir>config/jest/setupTests.ts'],
     moduleNameMapper: {
         '\\.(s?css)$': 'identity-obj-proxy',
-        '\\.svg': path.resolve(__dirname, 'jestEmptyComponent'),
+        '\\.svg': path.resolve(__dirname, 'jestEmptyComponent.tsx'),
     },
     // Шаблоны glob, которые Jest использует для обнаружения тестовых файлов
     testMatch: [
