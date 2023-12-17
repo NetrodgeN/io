@@ -20,7 +20,7 @@ module.exports = {
         ecmaVersion: 'latest',
         sourceType: 'module',
     },
-    plugins: ['react', '@typescript-eslint', 'i18next'],
+    plugins: ['react', '@typescript-eslint', 'i18next', 'react-hooks'],
     rules: {
     // 2 - это warning, identMode 4 - отступ равен 4 пробелам
     // 'react/jsx-indent': [2, {indentMode: 4, ignoreTernaryOperator: true}],
@@ -58,14 +58,18 @@ module.exports = {
             ignoreComments: true,
             code: 120,
         }],
+        'jsx-a11y/no-static-element-interactions': 'off',
+        'react-hooks/rules-of-hooks': 'error',
+        'react-hooks/exhaustive-deps': 'error'
     },
     globals: {
         __IS_DEV__: true,
     },
     overrides: [{
-        files: ['**/src/**/*.test.{ts,tsx}'],
+        files: ['**/src/**/*.{test, stories}.{ts,tsx}'],
         rules: {
             'i18next/no-literal-string': 'off',
+            'max-len': 'off',
         },
     }],
 };

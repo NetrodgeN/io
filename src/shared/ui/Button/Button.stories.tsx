@@ -37,6 +37,13 @@ export const Outline: Story = {
     },
 };
 
+export const OutlineInverted: Story = {
+    args: {
+        theme: ButtonTheme.BACKGROUND_INVERTED,
+        label: 'OutlineInverted',
+    },
+};
+
 export const Background: Story = {
     args: {
         theme: ButtonTheme.BACKGROUND,
