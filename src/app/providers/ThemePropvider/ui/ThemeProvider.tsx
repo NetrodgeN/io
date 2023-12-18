@@ -11,10 +11,11 @@ interface ThemeProviderProps {
     initialTheme?: Theme;
 }
 
-export const ThemeProvider: React.FC<ThemeProviderProps> = (props )=> {
+export const ThemeProvider: React.FC<ThemeProviderProps> = (props) => {
     const {
-        initialTheme, children,
-    } = props
+        initialTheme,
+        children,
+    } = props;
     const [theme, setTheme] = React.useState<Theme>(initialTheme || defaultTheme);
 
     const defaultProps = React.useMemo(() => ({

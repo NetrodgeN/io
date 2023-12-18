@@ -1,6 +1,9 @@
 import React from 'react';
 import { Decorator } from '@storybook/react';
-import {Theme, ThemeProvider} from 'app/providers/ThemePropvider';
+import {
+    Theme,
+    ThemeProvider,
+} from 'app/providers/ThemePropvider';
 
 const ThemeBlock = ({ left, children }: {left?: boolean, children: React.ReactNode}) => (
     <div style={{
