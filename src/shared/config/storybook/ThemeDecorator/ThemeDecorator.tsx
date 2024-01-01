@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { DetailedHTMLProps, HTMLAttributes } from 'react';
 import { Decorator } from '@storybook/react';
 import {
     Theme,
@@ -45,6 +45,8 @@ export const ThemeDecorator: Decorator = (StoryComponent, context) => {
         );
     }
     default: {
+        document.body.className = theme;
+
         return (
             <ThemeProvider
                 initialTheme={theme}
