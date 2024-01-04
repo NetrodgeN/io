@@ -5,4 +5,3 @@ storybook-static
 /build
 .loki/report.html
 .loki/report.json
-# Editor-based HTTP Client requests
