@@ -1,12 +1,5 @@
-import type {
-    Meta,
-    StoryObj,
-} from '@storybook/react';
-import {
-    Button,
-    ButtonSize,
-    ButtonTheme,
-} from './Button';
+import type { Meta, StoryObj } from '@storybook/react';
+import { Button, ButtonSize, ButtonTheme } from './Button';
 
 const meta: Meta<typeof Button> = {
     title: 'shared/Button',
@@ -89,5 +82,13 @@ export const SquareSizeXL: Story = {
         label: '>',
         square: true,
         size: ButtonSize.XL,
+    },
+};
+
+export const Disabled: Story = {
+    args: {
+        label: 'Disabled',
+        theme: ButtonTheme.OUTLINE,
+        disabled: true,
     },
 };

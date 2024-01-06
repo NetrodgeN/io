@@ -13,6 +13,9 @@
   "lorem": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi distinctio eligendi placeat provident quis\n                recusandae sequi! Accusantium beatae deserunt et excepturi, laborum nulla, perferendis quidem\n                recusandae rem rerum sint sit!",
   "increment": "increment",
   "decrement": "decrement",
-  "Введите пароль": "Введите пароль",
-  "Введите username": "Введите username"
+  "Введите пароль": "Enter пароль",
+  "Введите username": "Enter username",
+  "Форма авторизации": "Auth form",
+  "Вы ввели неверный логин или пароль": "Uncorrect username or password",
+  "Выйти": "Выйти"
 }
