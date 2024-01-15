@@ -49,10 +49,15 @@ export const Navbar = ({ className }: NavbarProps) => {
                 label={t('Войти')}
                 onClick={onShowModal}
             />
-            <LoginModal
-                onClose={onCloseModal}
-                isOpen={isAuthModal}
-            />
+            {
+                isAuthModal && (
+                    <LoginModal
+                        onClose={onCloseModal}
+                        isOpen={isAuthModal}
+                    />
+                )
+            }
+
         </div>
     );
 };
