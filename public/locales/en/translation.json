@@ -4,5 +4,18 @@
   "Язык": "English",
   "Страница не найдена": "Page not found",
   "Обновить страницу": "Refresh page",
-  "Произошла непредвиденная ошибка": "An unexpected error occurred"
+  "Произошла непредвиденная ошибка": "An unexpected error occurred",
+  "Главная": "Main",
+  "О сайте": "About us",
+  "toggle": "Переключить",
+  "Короткий язык": "En",
+  "Войти": "Login",
+  "lorem": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi distinctio eligendi placeat provident quis\n                recusandae sequi! Accusantium beatae deserunt et excepturi, laborum nulla, perferendis quidem\n                recusandae rem rerum sint sit!",
+  "increment": "increment",
+  "decrement": "decrement",
+  "Введите пароль": "Enter пароль",
+  "Введите username": "Enter username",
+  "Форма авторизации": "Auth form",
+  "Вы ввели неверный логин или пароль": "Uncorrect username or password",
+  "Выйти": "Выйти"
 }

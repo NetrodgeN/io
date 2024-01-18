@@ -19,13 +19,13 @@ export function buildPlugins({ paths, isDev }: BuildOptions):webpack.WebpackPlug
             __IS_DEV__: JSON.stringify(isDev),
         }),
         new ReactRefreshPlugin(),
-    ]
-    if(isDev){
-        plugins.push(new webpack.HotModuleReplacementPlugin())
+    ];
+    if (isDev) {
+        plugins.push(new webpack.HotModuleReplacementPlugin());
         plugins.push(new BundleAnalyzerPlugin({
             openAnalyzer: false,
-        }))
+        }));
     }
 
-    return plugins
+    return plugins;
 }

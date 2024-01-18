@@ -1,5 +1,7 @@
 # Default ignored files
 .idea
 node_modules
+storybook-static
 /build
-# Editor-based HTTP Client requests
+.loki/report.html
+.loki/report.json
