@@ -3,7 +3,7 @@ import React from 'react';
 import { useTheme } from 'app/providers/ThemePropvider';
 import cls from './ThemeSwitcher.module.scss';
 
-export const ThemeSwitcher = () => {
+export const ThemeSwitcher = React.memo(() => {
     const { toggleTheme } = useTheme();
 
     return (
@@ -38,6 +38,6 @@ export const ThemeSwitcher = () => {
             </label>
         </div>
     );
-};
+});
 
 ThemeSwitcher.displayName = 'ThemeSwitcher';

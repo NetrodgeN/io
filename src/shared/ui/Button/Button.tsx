@@ -1,5 +1,5 @@
 import { classNames } from 'shared/lib/classNames/classNames';
-import {
+import React, {
     ButtonHTMLAttributes,
 } from 'react';
 import cls from './Button.module.scss';
@@ -27,7 +27,7 @@ export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement>{
     disabled?: boolean;
 }
 
-export const Button = (props: ButtonProps) => {
+export const Button = React.memo((props: ButtonProps) => {
     const {
         className,
         theme,
@@ -53,6 +53,6 @@ export const Button = (props: ButtonProps) => {
             {label}
         </button>
     );
-};
+});
 
 Button.displayName = 'Button';
