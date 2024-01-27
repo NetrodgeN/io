@@ -20,7 +20,7 @@ export const Input = React.memo(({
     autofocus,
     ...otherProps
 }: InputProps) => {
-    const ref = React.useRef<HTMLInputElement>();
+    const ref = React.useRef<HTMLInputElement>(null);
     const [isFocused, setIsFocused] = React.useState(false);
     const [caretPosition, setCaretPosition] = React.useState(0);
 
