@@ -3,36 +3,41 @@ import {
     Route,
     Routes,
 } from 'react-router-dom';
-import { routeConfig } from 'shared/config/routeConfig/routeConfig';
+import { AppRoutesProps, routeConfig } from 'shared/config/routeConfig/routeConfig';
 import { PageLoader } from 'widgets/PageLoader';
-import { useSelector } from 'react-redux';
-import { getUserAuthData } from 'entities/User';
+import { RequireAuth } from './RequireAuth';
 
 export const AppRouter = React.memo(() => {
-    const isAuth = useSelector(getUserAuthData);
-
-    const routes = React.useMemo(() => Object.values(routeConfig).filter((route) => {
-        if (route.authOnly && !isAuth) {
-            return false;
-        }
-        return true;
-    }), [isAuth]);
+    const renderWithWrapper = React.useCallback((route: AppRoutesProps) => {
+        const element = (
+            <div className="page-wrapper">
+                {route.element}
+            </div>
+        );
+        return (
+            <Route
+                key={route.path}
+                path={route.path}
+                element={route.authOnly ? <RequireAuth>{element}</RequireAuth> : element}
+            />
+        );
+    }, []);
 
     return (
         <React.Suspense fallback={<PageLoader />}>
             <Routes>
-                {routes
-                    .map(({ element, path }) => (
-                        <Route
-                            key={path}
-                            element={(
-                                <div className="page-wrapper">
-                                    {element}
-                                </div>
-                            )}
-                            path={path}
-                        />
-                    ))}
+                {Object.values(routeConfig).map(renderWithWrapper)}
+                {/* .map(({ element, path }) => ( */}
+                {/*    <Route */}
+                {/*        key={path} */}
+                {/*        element={( */}
+                {/*            <div className="page-wrapper"> */}
+                {/*                {element} */}
+                {/*            </div> */}
+                {/*        )} */}
+                {/*        path={path} */}
+                {/*    /> */}
+                {/* ))} */}
             </Routes>
         </React.Suspense>
     );
