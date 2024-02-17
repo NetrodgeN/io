@@ -1,5 +1,5 @@
-import { classNames } from 'shared/lib/classNames/classNames';
-import {
+import { classNames, Mods } from 'shared/lib/classNames/classNames';
+import React, {
     ButtonHTMLAttributes,
 } from 'react';
 import cls from './Button.module.scss';
@@ -8,6 +8,7 @@ export enum ButtonTheme {
     CLEAR = 'clear',
     CLEAR_INVERTED = 'clearInverted',
     OUTLINE = 'outline',
+    OUTLINE_RED = 'outline_red',
     BACKGROUND = 'background',
     BACKGROUND_INVERTED = 'backgroundInverted',
 }
@@ -27,10 +28,10 @@ export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement>{
     disabled?: boolean;
 }
 
-export const Button = (props: ButtonProps) => {
+export const Button = React.memo((props: ButtonProps) => {
     const {
         className,
-        theme,
+        theme = ButtonTheme.OUTLINE,
         label,
         square,
         disabled,
@@ -38,7 +39,7 @@ export const Button = (props: ButtonProps) => {
         ...otherProps
     } = props;
 
-    const mods: Record<string, boolean> = {
+    const mods: Mods = {
         [cls.square]: square,
         [cls.disabled]: disabled,
     };
@@ -53,6 +54,6 @@ export const Button = (props: ButtonProps) => {
             {label}
         </button>
     );
-};
+});
 
 Button.displayName = 'Button';

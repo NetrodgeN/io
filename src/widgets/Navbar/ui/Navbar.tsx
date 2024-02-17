@@ -11,7 +11,7 @@ interface NavbarProps {
     className?: string;
 }
 
-export const Navbar = ({ className }: NavbarProps) => {
+export const Navbar = React.memo(({ className }: NavbarProps) => {
     const [isAuthModal, setIsAuthModal] = React.useState(false);
     const { t } = useTranslation();
     const dispatch = useDispatch();
@@ -60,6 +60,6 @@ export const Navbar = ({ className }: NavbarProps) => {
 
         </div>
     );
-};
+});
 
 Navbar.displayName = 'Navbar';

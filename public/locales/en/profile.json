@@ -1,0 +1,18 @@
+{
+  "Редактировать": "Edit",
+  "Профиль": "Profile",
+  "Фамилия": "Surname",
+  "Имя": "Name",
+  "Произошла ошибка при загрузке профиля": "There was an error loading your profile",
+  "Попробуйте обновить страницу": "Try refreshing the page",
+  "Город": "City",
+  "Возраст": "Age",
+  "Имя пользователя": "Username",
+  "Аватар": "Avatar",
+  "Серверная ошибка при сохранении": "Server error when saving",
+  "Не корректный возраст": "Incorrect age",
+  "Данные не указаны": "Data not provided",
+  "Не верная страна": "The Wrong Country",
+  "Имя и фамилия обязательны": "Name and surname are required",
+  "Ссылка на аватар": "Avatar link"
+}
