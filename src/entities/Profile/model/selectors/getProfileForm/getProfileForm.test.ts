@@ -1,6 +1,7 @@
 import { StateSchema } from 'app/providers/StoreProvider';
 import { Country } from 'entities/Counrty';
 import { Currency } from 'entities/Currency';
+
 import { getProfileForm } from './getProfileForm';
 
 describe('getProfileForm', () => {

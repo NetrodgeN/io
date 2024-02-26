@@ -1,5 +1,7 @@
-import { ComponentRender } from 'shared/config/tests/ComponentRender';
 import { screen } from '@testing-library/react';
+
+import { ComponentRender } from 'shared/config/tests/ComponentRender';
+
 import { Counter } from './Counter';
 
 describe('Counter', () => {

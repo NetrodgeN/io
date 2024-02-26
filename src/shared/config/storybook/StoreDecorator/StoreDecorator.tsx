@@ -1,15 +1,24 @@
+import React from 'react';
+
+import { Story } from '@storybook/react';
+
 import {
     StateSchema,
     StoreProvider,
 } from 'app/providers/StoreProvider';
-import { Story } from '@storybook/react';
-import { loginReducer } from 'features/AuthByUserName/model/slice/loginSlice';
+import { articleDetailsReducer } from 'entities/Article/model/slice/articleDetailsSlice';
 import { profileReducer } from 'entities/Profile';
+import { loginReducer } from 'features/AuthByUserName/model/slice/loginSlice';
+import { addCommentFormReducer } from 'features/addCommentForm/model/slices/addCommentFormSlice';
+import { articleDetailsCommentsReducer } from 'pages/ArticleDetailsPage/model/slices/articleDetailsCommentsSlice';
 import { ReducersList } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 
 const defaultAsyncReducers: ReducersList = {
     loginForm: loginReducer,
     profile: profileReducer,
+    articleDetails: articleDetailsReducer,
+    addCommentForm: addCommentFormReducer,
+    articleDetailsComments: articleDetailsCommentsReducer,
 };
 
 export const StoreDecorator = (

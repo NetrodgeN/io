@@ -33,7 +33,7 @@ module.exports = {
         }],
         // в проекте используются относительные пути
         'import/no-unresolved': 'off',
-        // правило указывать расширение пути. Но вебпак уже настроен и правило не нужно
+        // Правило указывать расширение пути. Но webpack уже настроен и правило не нужно
         'import/extensions': 'off',
         'import/prefer-default-export': 'off',
         'no-unused-vars': 'warn',
@@ -63,6 +63,46 @@ module.exports = {
         'react-hooks/exhaustive-deps': 'error',
         'no-param-reassign': 'off',
         'no-undef': 'off',
+        'import/order': ['error', {
+            'newlines-between': 'always',
+            groups: [
+                'builtin',
+                'external',
+                'internal',
+                'parent',
+                'sibling',
+                'index',
+                'object',
+            ],
+
+            pathGroups: [
+                {
+                    pattern: 'react**',
+                    group: 'external',
+                    position: 'before',
+                },
+                {
+                    pattern: '@**/**',
+                    group: 'external',
+                    position: 'before',
+                },
+                {
+                    pattern: '@**',
+                    group: 'external',
+                    position: 'before',
+                },
+                {
+                    pattern: '*.+(scss|json)',
+                    group: 'index',
+                    patternOptions: { matchBase: true },
+                    position: 'after',
+                },
+            ],
+            pathGroupsExcludedImportTypes: ['react'],
+            alphabetize: {
+                order: 'asc',
+            },
+        }],
     },
     globals: {
         __IS_DEV__: true,

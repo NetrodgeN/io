@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { Text, TextTheme } from './Text';
+import { Text, TextSize, TextTheme } from './Text';
 
 const meta: Meta<typeof Text> = {
     title: 'shared/Text',
@@ -46,5 +46,17 @@ export const Error: Story = {
             + ' eaque exercitationem impedit labore nemo nostrum '
             + 'praesentium quam qui quibusdam ratione reiciendis repellendus '
             + 'reprehenderit, sint velit, veniam vitae.',
+    },
+};
+
+export const SizeL: Story = {
+    args: {
+        title: 'Lorem ipsum dolor sit amet',
+        text: 'consectetur adipisicing elit. '
+            + 'Aliquam consectetur consequuntur corporis,'
+            + ' eaque exercitationem impedit labore nemo nostrum '
+            + 'praesentium quam qui quibusdam ratione reiciendis repellendus '
+            + 'reprehenderit, sint velit, veniam vitae.',
+        size: TextSize.L,
     },
 };

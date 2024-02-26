@@ -1,4 +1,5 @@
 import { classNames, Mods } from 'shared/lib/classNames/classNames';
+
 import cls from './Text.module.scss';
 
 export enum TextTheme {
@@ -11,6 +12,10 @@ export enum TextAlign {
     LEFT = 'left',
     CENTER = 'center',
 }
+export enum TextSize {
+    M = 'size_m',
+    L = 'size_l',
+}
 
 interface TextProps {
     className?: string;
@@ -18,6 +23,7 @@ interface TextProps {
     text?: string;
     theme?: TextTheme;
     align?: TextAlign;
+    size?: TextSize;
 }
 
 export const Text = ({
@@ -26,10 +32,12 @@ export const Text = ({
     text,
     theme = TextTheme.PRIMARY,
     align = TextAlign.LEFT,
+    size = TextSize.M,
 }: TextProps) => {
     const mods: Mods = {
         [cls[theme]]: true,
         [cls[align]]: true,
+        [cls[size]]: true,
     };
 
     return (

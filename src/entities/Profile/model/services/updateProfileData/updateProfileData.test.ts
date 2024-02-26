@@ -1,8 +1,8 @@
-import { userActions } from 'entities/User';
-import { TestAsyncThunk } from 'shared/config/tests/TestAsyncThunk/TestAsyncThunk';
 import { Country } from 'entities/Counrty';
 import { Currency } from 'entities/Currency';
 import { ValidateProfileError } from 'entities/Profile';
+import { TestAsyncThunk } from 'shared/config/tests/TestAsyncThunk/TestAsyncThunk';
+
 import { updateProfileData } from './updateProfileData';
 
 const data = {
@@ -13,6 +13,7 @@ const data = {
     city: 'Moscow',
     currency: Currency.RUB,
     username: 'Username',
+    id: '1',
 };
 
 describe('updateProfileData', () => {

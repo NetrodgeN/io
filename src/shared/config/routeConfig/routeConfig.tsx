@@ -1,10 +1,11 @@
 import { RouteProps } from 'react-router-dom';
-import { MainPageAsync } from 'pages/MainPage';
+
 import { AboutPageAsync } from 'pages/AboutPage';
-import { NotFoundPage } from 'pages/NotFoundPage';
-import { ProfilePageAsync } from 'pages/ProfilePage';
 import { ArticleDetailsPageAsync } from 'pages/ArticleDetailsPage';
 import { ArticlesPageAsync } from 'pages/ArticlesPage';
+import { MainPageAsync } from 'pages/MainPage';
+import { NotFoundPage } from 'pages/NotFoundPage';
+import { ProfilePageAsync } from 'pages/ProfilePage';
 
 export type AppRoutesProps = RouteProps & {
     authOnly?: boolean;
@@ -23,9 +24,9 @@ export enum AppRoutes {
 export const RoutePath: Record<AppRoutes, string> = {
     [AppRoutes.MAIN]: '/',
     [AppRoutes.ABOUT]: '/about',
-    [AppRoutes.PROFILE]: '/profile',
+    [AppRoutes.PROFILE]: '/profile/', // +id
     [AppRoutes.ARTICLES]: '/articles',
-    [AppRoutes.ARTICLE_DETAILS]: '/article/', // +id
+    [AppRoutes.ARTICLE_DETAILS]: '/articles/', // +id
 
     [AppRoutes.NOT_FOUND]: '*',
 };
@@ -40,7 +41,7 @@ export const routeConfig: Record<AppRoutes, AppRoutesProps> = {
         element: <AboutPageAsync />,
     },
     [AppRoutes.PROFILE]: {
-        path: RoutePath.profile,
+        path: `${RoutePath.profile}:id`,
         element: <ProfilePageAsync />,
         authOnly: true,
     },
