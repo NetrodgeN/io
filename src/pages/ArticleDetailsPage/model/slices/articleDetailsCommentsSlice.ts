@@ -2,12 +2,14 @@ import {
     createEntityAdapter,
     createSlice,
 } from '@reduxjs/toolkit';
-import { Comment } from 'entities/Comment';
+
 import { StateSchema } from 'app/providers/StoreProvider';
 import { fetchArticleById } from 'entities/Article/model/services/fetchArticleById/fetchArticleById';
+import { Comment } from 'entities/Comment';
 import {
     fetchCommentsByArticleId,
 } from 'pages/ArticleDetailsPage/model/services/fetchCommentsByArticleId/fetchCommentsByArticleId';
+
 import { ArticleDetailsCommentsSchema } from '../types/ArticleDetailsCommentsSchema';
 // https://redux-toolkit.js.org/api/createEntityAdapter
 const commentsAdapter = createEntityAdapter<Comment>({

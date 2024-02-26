@@ -1,8 +1,8 @@
-import { AxiosInstance } from 'axios';
 import {
     NavigateOptions,
     To,
 } from 'react-router-dom';
+
 import {
     AnyAction,
     CombinedState,
@@ -10,11 +10,14 @@ import {
     Reducer,
     ReducersMapObject,
 } from '@reduxjs/toolkit';
-import { LoginSchema } from 'features/AuthByUserName';
-import { ProfileSchema } from 'entities/Profile';
-import { CounterSchema } from 'entities/Counter';
-import { UserSchema } from 'entities/User';
+
+import { AxiosInstance } from 'axios';
 import { ArticleDetailsSchema } from 'entities/Article';
+import { CounterSchema } from 'entities/Counter';
+import { ProfileSchema } from 'entities/Profile';
+import { UserSchema } from 'entities/User';
+import { LoginSchema } from 'features/AuthByUserName';
+import { AddCommentFormSchema } from 'features/addCommentForm';
 import { ArticleDetailsCommentsSchema } from 'pages/ArticleDetailsPage';
 
 export interface StateSchema {
@@ -25,7 +28,8 @@ export interface StateSchema {
     loginForm?: LoginSchema;
     profile?: ProfileSchema;
     articleDetails?: ArticleDetailsSchema;
-    articleDetailsComments?: ArticleDetailsCommentsSchema
+    articleDetailsComments?: ArticleDetailsCommentsSchema;
+    addCommentForm?: AddCommentFormSchema;
 }
 
 export type StateSchemaKey = keyof StateSchema;

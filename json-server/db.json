@@ -19,8 +19,10 @@
       "img": "https://d1le3ohiuslpz1.cloudfront.net/skillcrush/wp-content/uploads/2018/07/Blog_JS-frames_21.jpg.webp",
       "views": 1022,
       "createdAt": "26.02.2022",
-      "type": ["IT"],
-      "blocks":  [
+      "type": [
+        "IT"
+      ],
+      "blocks": [
         {
           "id": "1",
           "type": "TEXT",
@@ -100,6 +102,42 @@
       "text": "some comment 3",
       "articleId": "1",
       "userId": "1"
+    },
+    {
+      "articleId": "1",
+      "userId": "1",
+      "text": "123",
+      "id": "jLrRmtb"
+    },
+    {
+      "articleId": "1",
+      "userId": "1",
+      "text": "123",
+      "id": "vgWYk0X"
+    },
+    {
+      "articleId": "1",
+      "userId": "2",
+      "text": "qwe",
+      "id": "0INJoFW"
+    },
+    {
+      "articleId": "1",
+      "userId": "1",
+      "text": "qwer",
+      "id": "DUy1N1i"
+    },
+    {
+      "articleId": "1",
+      "userId": "2",
+      "text": "www",
+      "id": "TnZvCiC"
+    },
+    {
+      "articleId": "1",
+      "userId": "1",
+      "text": "tesst cpmment",
+      "id": "Lk09uqY"
     }
   ],
   "users": [
@@ -118,14 +156,28 @@
       "avatar": "https://lh3.googleusercontent.com/v3HpSy5MSfUwGDR3UgS6ZO-LjxeuJiKfz583OMhDLU579oOQJyuOmIIMFoSFkJ5-_mUK=w220-rw"
     }
   ],
-  "profile": {
-    "first": "Николай",
-    "lastname": "Иванов",
-    "age": 26,
-    "currency": "RUB",
-    "country": "Russia",
-    "city": "Moscow",
-    "username": "admin",
-    "avatar": "https://pic.rutubelist.ru/user/3b/27/3b2758ad5492a76b578f7ee072e4e894.jpg"
-  }
+  "profile": [
+    {
+      "id": "1",
+      "first": "Николай",
+      "lastname": "Иванов",
+      "age": 26,
+      "currency": "RUB",
+      "country": "Russia",
+      "city": "Moscow",
+      "username": "NikIvanov",
+      "avatar": "https://pic.rutubelist.ru/user/3b/27/3b2758ad5492a76b578f7ee072e4e894.jpg"
+    },
+    {
+      "id": "2",
+      "first": "БорисJONOVICH",
+      "lastname": "Бенгальский",
+      "age": 33,
+      "currency": "RUB",
+      "country": "Russia",
+      "city": "Moscow",
+      "username": "BBen",
+      "avatar": "https://a.storyblok.com/f/178900/960x540/26fa3bcee8/frieren.jpg/m/filters:quality(95)format(webp)"
+    }
+  ]
 }
