@@ -14,11 +14,12 @@
   "articles": [
     {
       "id": "1",
-      "titlle": "Javascript news",
+      "title": "Javascript news",
       "subtitle": "Что нового в JS",
       "img": "https://d1le3ohiuslpz1.cloudfront.net/skillcrush/wp-content/uploads/2018/07/Blog_JS-frames_21.jpg.webp",
       "views": 1022,
       "createdAt": "26.02.2022",
+      "userId": "1",
       "type": [
         "IT"
       ],
