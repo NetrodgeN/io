@@ -41,7 +41,7 @@ export const ArticleListItem = React.memo((props: ArticleListItemProps) => {
     const navigate = useNavigate();
 
     const onOpenArticle = React.useCallback(() => {
-        navigate(RoutePath.article_details + article?.id);
+        navigate(`${RoutePath.article_details}${article?.id}`);
     }, [article?.id, navigate]);
 
     const types = <Text text={article?.type.join(', ')} className={cls.types} />;
