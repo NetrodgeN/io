@@ -12,7 +12,7 @@ import { RequireAuth } from './RequireAuth';
 export const AppRouter = React.memo(() => {
     const renderWithWrapper = React.useCallback((route: AppRoutesProps) => {
         const element = (
-            <div className="page-wrapper">
+            <div>
                 {route.element}
             </div>
         );

@@ -12,6 +12,10 @@ const data: Article = {
     views: 100,
     createdAt: '1010101',
     type: [ArticleType.IT],
+    user: {
+        id: '1',
+        username: 'aaaa, username',
+    },
     blocks: [{
         id: '1',
         type: ArticleBlockType.TEXT,

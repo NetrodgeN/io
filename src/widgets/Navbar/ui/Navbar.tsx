@@ -32,19 +32,19 @@ export const Navbar = React.memo(({ className }: NavbarProps) => {
 
     if (authData) {
         return (
-            <div className={classNames(cls.Navbar, {}, [className])}>
+            <header className={classNames(cls.Navbar, {}, [className])}>
                 <Button
                     theme={ButtonTheme.CLEAR_INVERTED}
                     className={cls.links}
                     label={t('Выйти')}
                     onClick={onLogout}
                 />
-            </div>
+            </header>
         );
     }
 
     return (
-        <div className={classNames(cls.Navbar, {}, [className])}>
+        <header className={classNames(cls.Navbar, {}, [className])}>
             <Button
                 theme={ButtonTheme.CLEAR_INVERTED}
                 className={cls.links}
@@ -60,7 +60,7 @@ export const Navbar = React.memo(({ className }: NavbarProps) => {
                 )
             }
 
-        </div>
+        </header>
     );
 });
 

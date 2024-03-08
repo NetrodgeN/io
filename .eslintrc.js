@@ -63,6 +63,7 @@ module.exports = {
         'react-hooks/exhaustive-deps': 'error',
         'no-param-reassign': 'off',
         'no-undef': 'off',
+        'react/no-array-index-key': 'off',
         'import/order': ['error', {
             'newlines-between': 'always',
             groups: [
@@ -110,7 +111,7 @@ module.exports = {
         __PROJECT__: true,
     },
     overrides: [{
-        files: ['**/src/**/*.{test, stories}.{ts,tsx}'],
+        files: ['**/src/**/*.{test,stories}.{ts,tsx}'],
         rules: {
             'i18next/no-literal-string': 'off',
             'max-len': 'off',
