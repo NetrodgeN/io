@@ -4,7 +4,10 @@ import {
     Routes,
 } from 'react-router-dom';
 
-import { AppRoutesProps, routeConfig } from 'shared/config/routeConfig/routeConfig';
+import {
+    AppRoutesProps,
+    routeConfig,
+} from 'shared/config/routeConfig/routeConfig';
 import { PageLoader } from 'widgets/PageLoader';
 
 import { RequireAuth } from './RequireAuth';
@@ -12,9 +15,10 @@ import { RequireAuth } from './RequireAuth';
 export const AppRouter = React.memo(() => {
     const renderWithWrapper = React.useCallback((route: AppRoutesProps) => {
         const element = (
-            <div>
+            // eslint-disable-next-line react/jsx-no-useless-fragment
+            <>
                 {route.element}
-            </div>
+            </>
         );
         return (
             <Route

@@ -2,7 +2,10 @@ import { ArticleView } from 'entities/Article';
 import ListIcon from 'shared/assets/icons/bi_list.svg';
 import TiledIcon from 'shared/assets/icons/fe_tiled.svg';
 import { classNames } from 'shared/lib/classNames/classNames';
-import { Button, ButtonTheme } from 'shared/ui/Button/Button';
+import {
+    Button,
+    ButtonTheme,
+} from 'shared/ui/Button/Button';
 import { Icon } from 'shared/ui/Icon/Icon';
 
 import cls from './ArticleViewSelector.module.scss';
@@ -35,6 +38,7 @@ export const ArticleViewSelector = (props: ArticleViewSelectorProps) => {
         <div className={classNames(cls.ArticleViewSelector, {}, [className])}>
             {viewTypes.map((viewType) => (
                 <Button
+                    key={viewType.view}
                     theme={ButtonTheme.CLEAR}
                     onClick={onClick(viewType.view)}
                     label={(
