@@ -6,6 +6,7 @@ import {
     ArticleList,
     ArticleViewSelector,
 } from 'entities/Article';
+import { ArticlesPageFilters } from 'pages/ArticlesPage/ui/ArticlesPageFilters/ArticlesPageFilters';
 import { classNames } from 'shared/lib/classNames/classNames';
 import {
     DynamicModuleLoader,
@@ -47,10 +48,6 @@ const ArticlesPage = ({ className }: ArticlesPageProps) => {
 
     const dispatch = useAppDispatch();
 
-    const onChangeView = React.useCallback((view) => {
-        dispatch(articlesPageActions.setView(view));
-    }, [dispatch]);
-
     const onLoadNextPart = React.useCallback(() => {
         dispatch(fetchNextArticlesPage());
     }, [dispatch]);
@@ -69,14 +66,12 @@ const ArticlesPage = ({ className }: ArticlesPageProps) => {
                 onScrollEnd={onLoadNextPart}
                 className={classNames(cls.ArticlesPage, {}, [className])}
             >
-                <ArticleViewSelector
-                    view={view}
-                    onViewClick={onChangeView}
-                />
+                <ArticlesPageFilters />
                 <ArticleList
                     isLoading={isLoading}
                     view={view}
                     articles={articles}
+                    className={cls.list}
                 />
             </Page>
         </DynamicModuleLoader>

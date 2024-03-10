@@ -81,11 +81,11 @@
     },
     {
       "id": "4",
-      "title": "Javascript news",
-      "subtitle": "Что нового в JS",
-      "img": "https://d1le3ohiuslpz1.cloudfront.net/skillcrush/wp-content/uploads/2018/07/Blog_JS-frames_21.jpg.webp",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "title": "lorem",
+      "subtitle": "lorem lorem lorem",
+      "img": "https://netrodgen.github.io/portfolio/assets/img/autumn/1.jpg",
+      "views": 9990,
+      "createdAt": "22.12.2023",
       "userId": "1",
       "type": [
         "IT"
@@ -102,9 +102,9 @@
       "id": "5",
       "title": "Blabla Bew",
       "subtitle": "Why are u bulling me?",
-      "img": "https://netrodgen.github.io/portfolio/assets/img/winter/2.jpg",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "img": "https://netrodgen.github.io/portfolio/assets/img/autumn/2.jpg",
+      "views": 6666,
+      "createdAt": "01.01.2000",
       "userId": "1",
       "type": [
         "IT"
@@ -126,8 +126,8 @@
       "id": "6",
       "title": "aaaaaaaaaaaaaaaaaaaaaa",
       "subtitle": "bbbbbbbbbbbbbbbbbbbbbb",
-      "img": "https://netrodgen.github.io/portfolio/assets/img/winter/1.jpg",
-      "views": 1022,
+      "img": "https://netrodgen.github.io/portfolio/assets/img/autumn/3.jpg",
+      "views": 3333,
       "createdAt": "26.02.2022",
       "userId": "1",
       "type": [
@@ -150,8 +150,8 @@
       "id": "7",
       "title": "Javascript news",
       "subtitle": "Что нового в JS",
-      "img": "https://d1le3ohiuslpz1.cloudfront.net/skillcrush/wp-content/uploads/2018/07/Blog_JS-frames_21.jpg.webp",
-      "views": 1022,
+      "img": "https://netrodgen.github.io/portfolio/assets/img/autumn/4.jpg",
+      "views": 1234,
       "createdAt": "26.02.2022",
       "userId": "1",
       "type": [
@@ -170,7 +170,7 @@
       "title": "Blabla Bew",
       "subtitle": "Why are u bulling me?",
       "img": "https://netrodgen.github.io/portfolio/assets/img/winter/2.jpg",
-      "views": 1022,
+      "views": 324,
       "createdAt": "26.02.2022",
       "userId": "1",
       "type": [
@@ -194,7 +194,7 @@
       "title": "aaaaaaaaaaaaaaaaaaaaaa",
       "subtitle": "bbbbbbbbbbbbbbbbbbbbbb",
       "img": "https://netrodgen.github.io/portfolio/assets/img/winter/1.jpg",
-      "views": 1022,
+      "views": 1,
       "createdAt": "26.02.2022",
       "userId": "1",
       "type": [
@@ -218,7 +218,7 @@
       "title": "Javascript news",
       "subtitle": "Что нового в JS",
       "img": "https://d1le3ohiuslpz1.cloudfront.net/skillcrush/wp-content/uploads/2018/07/Blog_JS-frames_21.jpg.webp",
-      "views": 1022,
+      "views": 10,
       "createdAt": "26.02.2022",
       "userId": "1",
       "type": [
@@ -237,7 +237,7 @@
       "title": "Blabla Bew",
       "subtitle": "Why are u bulling me?",
       "img": "https://netrodgen.github.io/portfolio/assets/img/winter/2.jpg",
-      "views": 1022,
+      "views": 12,
       "createdAt": "26.02.2022",
       "userId": "1",
       "type": [
