@@ -27,7 +27,7 @@ export const ArticleSortSelector = (props: ArticleSortSelectorProps) => {
         order,
     } = props;
 
-    const orderOptions = React.useMemo<SelectOption[]>(() => [
+    const orderOptions = React.useMemo<SelectOption<SortOrder>[]>(() => [
         {
             value: 'asc',
             content: t('возрастанию'),
@@ -39,7 +39,7 @@ export const ArticleSortSelector = (props: ArticleSortSelectorProps) => {
 
     ], [t]);
 
-    const sortFieldOptions = React.useMemo<SelectOption[]>(() => [
+    const sortFieldOptions = React.useMemo<SelectOption<ArticleSortField>[]>(() => [
         {
             value: ArticleSortField.CREATED,
             content: t('дате создания'),
@@ -60,10 +60,15 @@ export const ArticleSortSelector = (props: ArticleSortSelectorProps) => {
             <Select
                 options={sortFieldOptions}
                 label={t('Сортировать по')}
+                value={sort}
+                onChange={onChangeSort}
             />
             <Select
                 options={orderOptions}
                 label={t(' по')}
+                value={order}
+                onChange={onChangeOrder}
+                className={cls.order}
             />
         </div>
     );
