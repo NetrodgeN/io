@@ -1,11 +1,12 @@
-import path from 'path';
-
-import React, { MutableRefObject } from 'react';
+import React from 'react';
 import { useSelector } from 'react-redux';
 import { useLocation } from 'react-router-dom';
 
 import { StateSchema } from 'app/providers/StoreProvider';
-import { getScrollByPath, scrollSaveActions } from 'features/ScrollSave';
+import {
+    getScrollByPath,
+    scrollSaveActions,
+} from 'features/ScrollSave';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { useInfiniteScroll } from 'shared/lib/hooks/useInfiniteScroll/useInfiniteScroll';
@@ -27,8 +28,8 @@ export const Page = React.memo((props: PageProps) => {
         onScrollEnd,
     } = props;
 
-    const wrapperRef = React.useRef() as MutableRefObject<HTMLDivElement>;
-    const triggerRef = React.useRef() as MutableRefObject<HTMLDivElement>;
+    const wrapperRef = React.useRef() as React.MutableRefObject<HTMLDivElement>;
+    const triggerRef = React.useRef() as React.MutableRefObject<HTMLDivElement>;
 
     const dispatch = useAppDispatch();
     const { pathname } = useLocation();
@@ -59,7 +60,12 @@ export const Page = React.memo((props: PageProps) => {
             onScroll={onScroll}
         >
             {children}
-            <div ref={triggerRef} />
+            {onScrollEnd && (
+                <div
+                    className={cls.trigger}
+                    ref={triggerRef}
+                />
+            )}
         </section>
     );
 });

@@ -1,11 +1,12 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
+import { useSearchParams } from 'react-router-dom';
 
 import {
     ArticleList,
-    ArticleViewSelector,
 } from 'entities/Article';
+import { ArticlesPageFilters } from 'pages/ArticlesPage/ui/ArticlesPageFilters/ArticlesPageFilters';
 import { classNames } from 'shared/lib/classNames/classNames';
 import {
     DynamicModuleLoader,
@@ -23,7 +24,6 @@ import {
 import { fetchNextArticlesPage } from '../model/services/fetchNextArticlesPage/fetchNextArticlesPage';
 import { initArticlesPage } from '../model/services/initArticlesPage/initArticlesPage';
 import {
-    articlesPageActions,
     articlesPageReducer,
     getArticles,
 } from '../model/slices/articlesPageSlice';
@@ -44,19 +44,16 @@ const ArticlesPage = ({ className }: ArticlesPageProps) => {
     const error = useSelector(getArticlesPageError);
     const view = useSelector(getArticlesPageView);
     const articles = useSelector(getArticles.selectAll);
+    const [searchParams] = useSearchParams();
 
     const dispatch = useAppDispatch();
-
-    const onChangeView = React.useCallback((view) => {
-        dispatch(articlesPageActions.setView(view));
-    }, [dispatch]);
 
     const onLoadNextPart = React.useCallback(() => {
         dispatch(fetchNextArticlesPage());
     }, [dispatch]);
 
     useInitialEffect(() => {
-        dispatch(initArticlesPage());
+        dispatch(initArticlesPage(searchParams));
     });
 
     if (error) {
@@ -69,14 +66,12 @@ const ArticlesPage = ({ className }: ArticlesPageProps) => {
                 onScrollEnd={onLoadNextPart}
                 className={classNames(cls.ArticlesPage, {}, [className])}
             >
-                <ArticleViewSelector
-                    view={view}
-                    onViewClick={onChangeView}
-                />
+                <ArticlesPageFilters />
                 <ArticleList
                     isLoading={isLoading}
                     view={view}
                     articles={articles}
+                    className={cls.list}
                 />
             </Page>
         </DynamicModuleLoader>
