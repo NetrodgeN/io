@@ -15,6 +15,8 @@ import { useThrottle } from 'shared/lib/hooks/useThrottle/useThrottle';
 
 import cls from './Page.module.scss';
 
+export const PAGE_ID = 'PAGE_ID';
+
 interface PageProps {
     className?: string;
     children: React.ReactNode;
@@ -58,6 +60,7 @@ export const Page = React.memo((props: PageProps) => {
             ref={wrapperRef}
             className={classNames(cls.Page, {}, [className])}
             onScroll={onScroll}
+            id={PAGE_ID}
         >
             {children}
             {onScrollEnd && (
