@@ -6,7 +6,6 @@ import { useSearchParams } from 'react-router-dom';
 import {
     ArticleList,
 } from 'entities/Article';
-import { ArticlesPageFilters } from 'pages/ArticlesPage/ui/ArticlesPageFilters/ArticlesPageFilters';
 import { classNames } from 'shared/lib/classNames/classNames';
 import {
     DynamicModuleLoader,
@@ -27,6 +26,8 @@ import {
     articlesPageReducer,
     getArticles,
 } from '../model/slices/articlesPageSlice';
+
+import { ArticlesPageFilters } from './ArticlesPageFilters/ArticlesPageFilters';
 
 import cls from './ArticlesPage.module.scss';
 

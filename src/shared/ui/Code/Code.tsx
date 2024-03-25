@@ -2,7 +2,8 @@ import React from 'react';
 
 import CopyIcon from 'shared/assets/icons/CopyIcon.svg';
 import { classNames } from 'shared/lib/classNames/classNames';
-import { Button, ButtonTheme } from 'shared/ui/Button/Button';
+
+import { Button, ButtonTheme } from '../Button/Button';
 
 import cls from './Code.module.scss';
 

@@ -20,7 +20,13 @@ module.exports = {
         ecmaVersion: 'latest',
         sourceType: 'module',
     },
-    plugins: ['react', '@typescript-eslint', 'i18next', 'react-hooks'],
+    plugins: [
+        'react',
+        '@typescript-eslint',
+        'i18next',
+        'react-hooks',
+        'netrodgen-project',
+    ],
     rules: {
     // 2 - это warning, identMode 4 - отступ равен 4 пробелам
     // 'react/jsx-indent': [2, {indentMode: 4, ignoreTernaryOperator: true}],
@@ -104,6 +110,7 @@ module.exports = {
                 order: 'asc',
             },
         }],
+        'netrodgen-project/path-checker': 'error',
     },
     globals: {
         __IS_DEV__: true,

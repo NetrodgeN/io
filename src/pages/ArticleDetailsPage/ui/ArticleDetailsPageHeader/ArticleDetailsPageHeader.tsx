@@ -5,10 +5,11 @@ import { useNavigate } from 'react-router-dom';
 
 import { getArticleDetailsData } from 'entities/Article';
 import { getUserAuthData } from 'entities/User';
-import { getCanEditArticle } from 'pages/ArticleDetailsPage/model/selectors/article';
 import { RoutePath } from 'shared/config/routeConfig/routeConfig';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { Button, ButtonTheme } from 'shared/ui/Button/Button';
+
+import { getCanEditArticle } from '../../model/selectors/article';
 
 import cls from './ArticleDetailsPageHeader.module.scss';
 
