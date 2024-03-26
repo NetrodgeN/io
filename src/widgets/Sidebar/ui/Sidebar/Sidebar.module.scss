@@ -16,7 +16,6 @@
 
 .lang {
     margin-left: 20px;
-    color: #24d7f7;
 }
 
 .collapseBtn {
@@ -28,8 +27,6 @@
 .items {
     margin-top: 20px;
     margin-left: 30px;
-    display: flex;
-    flex-direction: column;
 }
 
 .collapsed {
@@ -42,11 +39,5 @@
 
     .lang {
         margin-left: 0;
-    }
-
-    .link {
-        opacity: 0;
-        transition: 0.2s opacity;
-        width: 0;
     }
 }

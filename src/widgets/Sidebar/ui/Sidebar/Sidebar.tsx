@@ -7,6 +7,7 @@ import {
     ButtonSize,
     ButtonTheme,
 } from 'shared/ui/Button/Button';
+import { VStack } from 'shared/ui/Stack';
 import { LangSwitcher } from 'widgets/LangSwitcher/LangSwitcher';
 import { ThemeSwitcher } from 'widgets/ThemeSwitcher';
 
@@ -57,9 +58,9 @@ export const Sidebar = React.memo(({ className }: SidebarProps) => {
                 size={ButtonSize.L}
                 square
             />
-            <div className={cls.items}>
+            <VStack gap="8" className={cls.items}>
                 {itemList}
-            </div>
+            </VStack>
             <div className={cls.switchers}>
                 <ThemeSwitcher />
                 <LangSwitcher className={cls.lang} short={collapsed} />
