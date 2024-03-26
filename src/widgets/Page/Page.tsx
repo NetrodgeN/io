@@ -56,7 +56,7 @@ export const Page = React.memo((props: PageProps) => {
     }, 2000);
 
     return (
-        <section
+        <main
             ref={wrapperRef}
             className={classNames(cls.Page, {}, [className])}
             onScroll={onScroll}
@@ -69,7 +69,7 @@ export const Page = React.memo((props: PageProps) => {
                     ref={triggerRef}
                 />
             )}
-        </section>
+        </main>
     );
 });
 
