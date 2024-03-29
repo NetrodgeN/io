@@ -74,5 +74,5 @@ export const SizeS: Story = {
         title: 'Title lorem ipsun',
         text: 'Description Description Description Description',
         size: TextSize.S,
-    }
+    },
 };

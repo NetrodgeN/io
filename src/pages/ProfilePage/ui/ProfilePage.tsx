@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 
-import { Country } from 'entities/Counrty';
+import { Country } from 'entities/Country';
 import { Currency } from 'entities/Currency';
 import {
     fetchProfileData,

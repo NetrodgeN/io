@@ -1,4 +1,4 @@
-import { Country } from 'entities/Counrty/model/types/country';
+import { Country } from 'entities/Country/model/types/country';
 import { Currency } from 'entities/Currency/model/types/currency';
 
 export enum ValidateProfileError {
