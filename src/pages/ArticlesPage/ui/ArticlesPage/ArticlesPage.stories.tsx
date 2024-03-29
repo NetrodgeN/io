@@ -1,16 +1,16 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import ArticlesPage from './ArticlesPage';
-import { StoreDecorator } from "shared/config/storybook/StoreDecorator/StoreDecorator";
+import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator';
 import {
     ArticleSortField,
     ArticleType,
-    ArticleView
-} from "entities/Article";
+    ArticleView,
+} from 'entities/Article';
 
 const meta: Meta<typeof ArticlesPage> = {
     title: 'pages/ArticlesPage/ArticlesPage',
     component: ArticlesPage,
-    decorators: [StoreDecorator({})]
+    decorators: [StoreDecorator({})],
 };
 
 export default meta;
@@ -33,6 +33,6 @@ export const Normal: Story = {
             sort: ArticleSortField.VIEWS,
             _inited: false,
             type: ArticleType.ALL,
-        }
-    })]
+        },
+    })],
 };

@@ -122,6 +122,8 @@ module.exports = {
         rules: {
             'i18next/no-literal-string': 'off',
             'max-len': 'off',
+            'netrodgen-project/path-checker': 'off',
+            'import/order': 'off',
         },
     }],
 };
