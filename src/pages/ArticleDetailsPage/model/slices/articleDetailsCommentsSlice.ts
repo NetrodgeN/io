@@ -4,12 +4,11 @@ import {
 } from '@reduxjs/toolkit';
 
 import { StateSchema } from 'app/providers/StoreProvider';
-import { fetchArticleById } from 'entities/Article/model/services/fetchArticleById/fetchArticleById';
 import { Comment } from 'entities/Comment';
+
 import {
     fetchCommentsByArticleId,
-} from 'pages/ArticleDetailsPage/model/services/fetchCommentsByArticleId/fetchCommentsByArticleId';
-
+} from '../services/fetchCommentsByArticleId/fetchCommentsByArticleId';
 import { ArticleDetailsCommentsSchema } from '../types/ArticleDetailsCommentsSchema';
 // https://redux-toolkit.js.org/api/createEntityAdapter
 const commentsAdapter = createEntityAdapter<Comment>({

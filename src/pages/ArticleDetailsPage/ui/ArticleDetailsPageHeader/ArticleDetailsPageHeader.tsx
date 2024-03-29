@@ -5,10 +5,12 @@ import { useNavigate } from 'react-router-dom';
 
 import { getArticleDetailsData } from 'entities/Article';
 import { getUserAuthData } from 'entities/User';
-import { getCanEditArticle } from 'pages/ArticleDetailsPage/model/selectors/article';
 import { RoutePath } from 'shared/config/routeConfig/routeConfig';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { Button, ButtonTheme } from 'shared/ui/Button/Button';
+import { HStack } from 'shared/ui/Stack';
+
+import { getCanEditArticle } from '../../model/selectors/article';
 
 import cls from './ArticleDetailsPageHeader.module.scss';
 
@@ -36,24 +38,21 @@ export const ArticleDetailsPageHeader = React.memo((props: ArticleDetailsPageHea
     }, [article?.id, navigate]);
 
     return (
-        <div className={classNames(cls.ArticleDetailsPageHeader, {}, [className])}>
+        <HStack max justify="between" className={classNames('', {}, [className])}>
             <Button
                 label={t('Назад к списку')}
                 theme={ButtonTheme.OUTLINE}
                 onClick={onBackToList}
             />
-            {
-                canEdit && (
-                    <Button
-                        className={cls.editBtn}
-                        label={t('Редактировать')}
-                        theme={ButtonTheme.OUTLINE}
-                        onClick={onEditArticle}
-                    />
-                )
-            }
-
-        </div>
+            {canEdit && (
+                <Button
+                    className={cls.editBtn}
+                    label={t('Редактировать')}
+                    theme={ButtonTheme.OUTLINE}
+                    onClick={onEditArticle}
+                />
+            )}
+        </HStack>
     );
 });
 
