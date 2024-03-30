@@ -1,8 +1,8 @@
 import React from 'react';
 
-import { Theme, useTheme } from 'app/providers/ThemePropvider';
+import { useTheme } from 'app/providers/ThemePropvider';
 import { classNames } from 'shared/lib/classNames/classNames';
-import { Button, ButtonTheme } from 'shared/ui/Button/Button';
+import { Button, ButtonSize, ButtonTheme } from 'shared/ui/Button/Button';
 // TODO: need refactoring
 export const ThemeSwitcher = React.memo(() => {
     const { theme, toggleTheme } = useTheme();
@@ -10,9 +10,11 @@ export const ThemeSwitcher = React.memo(() => {
     return (
         <Button
             theme={ButtonTheme.OUTLINE_RED}
+            size={ButtonSize.M}
+            square
             className={classNames('', {}, [])}
             onClick={toggleTheme}
-            title={theme === Theme.DARK ? 'LIGHT' : 'DARK'}
+            label="*"
         />
     );
 });
