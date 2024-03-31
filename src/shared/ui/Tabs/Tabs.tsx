@@ -26,7 +26,7 @@ export const Tabs = React.memo((props: TabsProps) => {
         value,
     } = props;
 
-    const onClickHandle = React.useCallback((tab) => () => {
+    const onClickHandle = React.useCallback((tab: TabItem) => () => {
         onTabClick(tab);
     }, [onTabClick]);
 

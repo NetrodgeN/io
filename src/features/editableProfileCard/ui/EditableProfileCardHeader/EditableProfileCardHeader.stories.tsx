@@ -1,17 +1,15 @@
-import React from 'react';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react';
 
 import { EditableProfileCardHeader } from './EditableProfileCardHeader';
 
-export default {
+const meta: Meta<typeof EditableProfileCardHeader> = {
     title: 'features/editableProfileCard/EditableProfileCardHeader',
     component: EditableProfileCardHeader,
-    argTypes: {
-        backgroundColor: { control: 'color' },
-    },
-} as ComponentMeta<typeof EditableProfileCardHeader>;
+};
+export default meta;
 
-const Template: ComponentStory<typeof EditableProfileCardHeader> = (args) => <EditableProfileCardHeader {...args} />;
+type Story = StoryObj<typeof EditableProfileCardHeader>
 
-export const Normal = Template.bind({});
-Normal.args = {};
+export const Normal: Story = {
+    args: {},
+};

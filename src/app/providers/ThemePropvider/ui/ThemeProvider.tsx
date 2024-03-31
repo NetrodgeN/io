@@ -10,9 +10,10 @@ const defaultTheme = localStorage.getItem(LOCAL_STORAGE_THEME_KEY) as Theme || T
 
 interface ThemeProviderProps {
     initialTheme?: Theme;
+    children: React.ReactNode;
 }
 
-export const ThemeProvider: React.FC<ThemeProviderProps> = (props) => {
+export const ThemeProvider = (props: ThemeProviderProps) => {
     const {
         initialTheme,
         children,

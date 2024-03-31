@@ -22,7 +22,7 @@ type Story = StoryObj<typeof Dropdown>;
 
 export const Normal: Story = {
     args: {
-        trigger: <Button>Open</Button>,
+        trigger: <Button label="Open" />,
         items: [
             {
                 content: 'first',

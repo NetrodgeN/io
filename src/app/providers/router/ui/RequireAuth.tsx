@@ -5,19 +5,36 @@ import {
     useLocation,
 } from 'react-router-dom';
 
-import { getUserAuthData } from 'entities/User';
+import { getUserAuthData, getUserRoles, UserRole } from 'entities/User';
 import { RoutePath } from 'shared/config/routeConfig/routeConfig';
 
-export function RequireAuth({ children }: { children: JSX.Element }) {
+interface RequireAuthProps {
+    children: JSX.Element;
+    roles?: UserRole[];
+}
+
+export function RequireAuth({ children, roles }: RequireAuthProps) {
     const auth = useSelector(getUserAuthData);
     const location = useLocation();
+    const userRoles = useSelector(getUserRoles);
+
+    const hasRequiredRoles = React.useMemo(() => {
+        if (!roles) {
+            return true;
+        }
+
+        return roles.some((requiredRole) => {
+            const hasRole = userRoles?.includes(requiredRole);
+            return hasRole;
+        });
+    }, [roles, userRoles]);
 
     if (!auth) {
-        // Перенаправляем их на страницу /login, но сохраняем текущее местоположение, где они находились
-        // пытаемся перейти туда, где они были перенаправлены. Это позволяет нам отправлять их
-        // переходом на эту страницу после входа в систему, что более удобно для пользователя
-        // чем размещать их на главной странице.
         return <Navigate to={RoutePath.main} state={{ from: location }} replace />;
+    }
+
+    if (!hasRequiredRoles) {
+        return <Navigate to={RoutePath.forbidden} state={{ from: location }} replace />;
     }
 
     return children;

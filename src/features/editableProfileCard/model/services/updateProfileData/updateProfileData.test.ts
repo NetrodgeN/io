@@ -3,7 +3,8 @@ import { Currency } from 'entities/Currency';
 import { TestAsyncThunk } from 'shared/config/tests/TestAsyncThunk/TestAsyncThunk';
 
 import { updateProfileData } from './updateProfileData';
-import { ValidateProfileError } from 'features/editableProfileCard/model/types/editableProfileCardSchema';
+
+import { ValidateProfileError } from '../../consts/consts';
 
 const data = {
     age: 22,
