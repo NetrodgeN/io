@@ -1,6 +1,5 @@
 import React, { HTMLAttributeAnchorTarget } from 'react';
 import { useTranslation } from 'react-i18next';
-import { useNavigate } from 'react-router-dom';
 
 import EyeIcon from 'shared/assets/icons/eye.svg';
 import { RoutePath } from 'shared/config/routeConfig/routeConfig';
@@ -15,10 +14,10 @@ import { Card } from 'shared/ui/Card/Card';
 import { Icon } from 'shared/ui/Icon/Icon';
 import { Text } from 'shared/ui/Text/Text';
 
+import { ArticleBlockType, ArticleView } from '../../model/consts/consts';
 import {
     Article,
-    ArticleBlockType, ArticleTextBlock,
-    ArticleView,
+    ArticleTextBlock,
 } from '../../model/types/article';
 import { ArticleTextBlockComponent } from '../ArticleTextBlockComponent/ArticleTextBlockComponent';
 

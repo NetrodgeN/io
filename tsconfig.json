@@ -15,7 +15,8 @@
     "paths": {
       // Все импорты и экспорты будут идти из папки src
       "*": ["./src/*"]
-    }
+    },
+    "isolatedModules": true
   },
   "ts-node": {
     "compilerOptions": {

@@ -12,18 +12,6 @@ const meta: Meta<typeof ProfilePage> = {
     decorators: [
         StoreDecorator({}),
     ],
-    parameters: {
-        mockData: [
-            {
-                // @ts-ignore
-                url: `${__API__}/articles?_limit=3`,
-                method: 'GET',
-                status: 200,
-                response: [
-                ],
-            },
-        ],
-    },
 };
 
 export default meta;
