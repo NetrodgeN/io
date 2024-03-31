@@ -1,17 +1,17 @@
-import React from 'react';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
-
 import { ArticleDetailsComments } from './ArticleDetailsComments';
+import { Meta, type StoryObj } from '@storybook/react';
+import { StoreDecorator } from '../../../../shared/config/storybook/StoreDecorator/StoreDecorator';
 
-export default {
+const meta: Meta<typeof ArticleDetailsComments> = {
     title: 'pages/ArticleDetailsPage/ArticleDetailsComments',
     component: ArticleDetailsComments,
-    argTypes: {
-        backgroundColor: { control: 'color' },
-    },
-} as ComponentMeta<typeof ArticleDetailsComments>;
+};
+export default meta;
+type Story = StoryObj<typeof ArticleDetailsComments>
 
-const Template: ComponentStory<typeof ArticleDetailsComments> = (args) => <ArticleDetailsComments {...args} />;
-
-export const Normal = Template.bind({});
-Normal.args = {};
+export const Normal: Story = {
+    args: {},
+    decorators: [
+        StoreDecorator({}),
+    ],
+};
