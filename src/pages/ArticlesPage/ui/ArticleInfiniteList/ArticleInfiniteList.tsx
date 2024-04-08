@@ -22,7 +22,7 @@ export const ArticleInfiniteList = memo((props: ArticleInfiniteListProps) => {
     const isLoading = useSelector(getArticlesPageIsLoading);
     const view = useSelector(getArticlesPageView);
     const error = useSelector(getArticlesPageError);
-    const { t } = useTranslation();
+    const { t } = useTranslation('articles');
 
     if (error) {
         return <Text text={t('Ошибка при загрузке статей')} />;

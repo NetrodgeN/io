@@ -24,5 +24,8 @@
   "Сохранить": "Save",
   "Укажите валюту": "Enter your currency",
   "Укажите страну": "Enter your country",
-  "Произошла ошибка при загрузке статьи": "Произошла ошибка при загрузке статьи"
+  "Произошла ошибка при загрузке статьи": "there was an error loading the article",
+  "Статьи": "Articles",
+  "Netrodgen App": "Netrodgen App",
+  "Создать статью": "Create an article"
 }
