@@ -38,7 +38,10 @@ export const Input = React.memo((props: InputProps) => {
             ref.current?.focus();
         }
     }, [autofocus]);
-
+    // const onChangeHandler = (e: React.ChangeEvent<HTMLInputElement>) => setTimeout(() => {
+    //     onChange?.(e.target.value);
+    //     setCaretPosition(e.target.value.length);
+    // }, 100);
     const onChangeHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
         onChange?.(e.target.value);
         setCaretPosition(e.target.value.length);

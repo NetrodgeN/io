@@ -37,11 +37,13 @@ export const ArticleList = memo((props: ArticleListProps) => {
         target,
         virtualized = true,
     } = props;
-    const { t } = useTranslation();
+    const { t } = useTranslation('articles');
 
     const isBig = view === ArticleView.BIG;
 
-    const itemsPerRow = isBig ? 1 : 3;
+    const columnCount = Math.floor((window.innerWidth - 300) / 230) - 1;
+
+    const itemsPerRow = isBig ? 1 : columnCount;
     const rowCount = isBig ? articles.length : Math.ceil(articles.length / itemsPerRow);
 
     const rowRender = ({

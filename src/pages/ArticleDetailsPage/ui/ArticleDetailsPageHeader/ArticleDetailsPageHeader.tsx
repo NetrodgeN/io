@@ -23,7 +23,7 @@ export const ArticleDetailsPageHeader = React.memo((props: ArticleDetailsPageHea
         className,
     } = props;
 
-    const { t } = useTranslation();
+    const { t } = useTranslation('article-details');
     const navigate = useNavigate();
     const userData = useSelector(getUserAuthData);
     const article = useSelector(getArticleDetailsData);

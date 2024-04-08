@@ -1,4 +1,4 @@
-import { Fragment, ReactNode } from 'react';
+import { ReactNode } from 'react';
 
 import { Menu } from '@headlessui/react';
 
@@ -32,7 +32,10 @@ const mapDirectionClass: Record<DropdownDirection, string> = {
 
 export function Dropdown(props: DropdownProps) {
     const {
-        className, trigger, items, direction = 'bottom right',
+        className,
+        trigger,
+        items,
+        direction = 'bottom right',
     } = props;
 
     const menuClasses = [mapDirectionClass[direction]];
@@ -57,14 +60,22 @@ export function Dropdown(props: DropdownProps) {
 
                     if (item.href) {
                         return (
-                            <Menu.Item as={AppLink} to={item.href} disabled={item.disabled}>
+                            <Menu.Item
+                                key={String(item.content)}
+                                as={AppLink}
+                                to={item.href}
+                                disabled={item.disabled}
+                            >
                                 {content}
                             </Menu.Item>
                         );
                     }
 
                     return (
-                        <Menu.Item as={Fragment} disabled={item.disabled}>
+                        <Menu.Item
+                            key={String(item.content)}
+                            disabled={item.disabled}
+                        >
                             {content}
                         </Menu.Item>
                     );
