@@ -10,7 +10,6 @@ import { classNames } from 'shared/lib/classNames/classNames';
 import { Avatar } from 'shared/ui/Avatar/Avatar';
 import { Dropdown } from 'shared/ui/Popups';
 
-
 interface AvatarDropdownProps {
     className?: string;
 }

@@ -13,4 +13,3 @@ type Story = StoryObj<typeof Popover>;
 export const Normal: Story = {
     args: {},
 };
-
