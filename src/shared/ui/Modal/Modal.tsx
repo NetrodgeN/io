@@ -4,6 +4,7 @@ import {
     classNames,
     Mods,
 } from 'shared/lib/classNames/classNames';
+import { useModal } from 'shared/lib/hooks/useModal/useModal';
 
 import { Overlay } from '../Overlay/Overlay';
 import { Portal } from '../Portal/Portal';
@@ -27,49 +28,16 @@ export const Modal = ({
     onClose,
     lazy,
 }: ModalProps) => {
-    const [isClosing, setIsClosing] = React.useState(false);
-    const [isMounted, setIsMounted] = React.useState(false);
-    const timerRef = React.useRef() as React.MutableRefObject<ReturnType<typeof setTimeout>>;
-
-    React.useEffect(() => {
-        if (isOpen) {
-            setIsMounted(true);
-        }
-    }, [isOpen]);
-
-    const closeHandler = React.useCallback(() => {
-        if (onClose) {
-            setIsClosing(true);
-            timerRef.current = setTimeout(() => {
-                onClose();
-                setIsClosing(false);
-            }, ANIMATION_DELAY);
-        }
-    }, [onClose]);
+    const { isClosing, close, isMounted } = useModal({
+        animationDelay: ANIMATION_DELAY,
+        onClose,
+        isOpen,
+    });
 
     const mods: Mods = {
         [cls.opened]: isOpen,
         [cls.isClosing]: isClosing,
     };
-
-    const onContentClick = (e: React.MouseEvent) => {
-        e.stopPropagation();
-    };
-    const onKeyDown = React.useCallback((e: KeyboardEvent) => {
-        if (e.key === 'Escape') {
-            closeHandler();
-        }
-    }, [closeHandler]);
-
-    React.useEffect(() => {
-        if (isOpen) {
-            window.addEventListener('keydown', onKeyDown);
-        }
-        return () => {
-            clearTimeout(timerRef.current);
-            window.removeEventListener('keydown', onKeyDown);
-        };
-    }, [isOpen, onKeyDown]);
 
     if (lazy && !isMounted) {
         return null;
@@ -86,7 +54,7 @@ export const Modal = ({
                     )
                 }
             >
-                <Overlay onClick={closeHandler} />
+                <Overlay onClick={close} />
                 <div
                     className={cls.content}
                 >
