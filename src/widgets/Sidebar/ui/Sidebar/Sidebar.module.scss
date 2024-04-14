@@ -22,9 +22,7 @@
     position: absolute;
     right: -32px;
     bottom: 32px;
-
-    // TODO: z-index вынести в константы
-    z-index: 100000;
+    z-index: var(--sidebar-z-index);
 }
 
 .items {

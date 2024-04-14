@@ -3,7 +3,7 @@ import {
     StoryObj,
 } from '@storybook/react';
 
-import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator';
+import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDecorator';
 
 import { Navbar } from './Navbar';
 

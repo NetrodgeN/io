@@ -1,6 +1,6 @@
 import { fireEvent, screen } from '@testing-library/react';
 
-import { ComponentRender } from 'shared/config/tests/ComponentRender';
+import { ComponentRender } from '@/shared/config/tests/ComponentRender';
 
 import { Sidebar } from './Sidebar';
 

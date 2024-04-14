@@ -7,8 +7,8 @@ import {
 import {
     AppRoutesProps,
     routeConfig,
-} from 'shared/config/routeConfig/routeConfig';
-import { PageLoader } from 'widgets/PageLoader';
+} from '@/shared/config/routeConfig/routeConfig';
+import { PageLoader } from '@/widgets/PageLoader';
 
 import { RequireAuth } from './RequireAuth';
 
