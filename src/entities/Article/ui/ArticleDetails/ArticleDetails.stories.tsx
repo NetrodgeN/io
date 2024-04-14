@@ -8,7 +8,7 @@ import { ArticleDetails } from './ArticleDetails';
 import { ArticleBlockType, ArticleType } from '../../model/consts/consts';
 
 const meta: Meta<typeof ArticleDetails> = {
-    title: 'entity/ArticleDetails',
+    title: 'entities/Article/ArticleDetails',
     component: ArticleDetails,
 };
 

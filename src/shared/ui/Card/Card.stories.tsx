@@ -5,7 +5,7 @@ import { Text } from '../Text/Text';
 import { Card } from './Card';
 
 const meta: Meta<typeof Card> = {
-    title: 'Card',
+    title: 'shared/Card',
     component: Card,
 };
 

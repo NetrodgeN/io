@@ -8,7 +8,7 @@ import {
 import { ListBox } from './ListBox';
 
 const meta: Meta<typeof ListBox> = {
-    title: 'shared/ListBox',
+    title: 'shared/Popups/ListBox',
     component: ListBox,
     argTypes: {
         // backgroundColor: { control: 'color' },

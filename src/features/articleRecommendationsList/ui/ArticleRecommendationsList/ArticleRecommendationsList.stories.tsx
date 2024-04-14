@@ -1,14 +1,14 @@
 import { Meta, StoryObj } from '@storybook/react';
 
 import { ArticleRecommendationsList } from './ArticleRecommendationsList';
-import { StoreDecorator } from '../../../../shared/config/storybook/StoreDecorator/StoreDecorator';
-import { Article } from '../../../../entities/Article';
+import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator';
+import { Article } from 'entities/Article';
 
 const mock = {
     id: '1',
     title: 'Javascript',
     subtitle: 'Что нового в JS',
-    img: '',
+    img: 'https://avatars.githubusercontent.com/u/55?v=4',
     views: 1022,
     user: {},
     createdAt: '26.02.2022',
@@ -19,7 +19,8 @@ const mock = {
             type: 'TEXT',
             title: 'Заголовок этого блока',
             paragraphs: [
-                'Программа, которую по традиции называют «Hello, world!», очень проста. Она выводит куда-либо фразу «Hello, world!», или другую подобную, средствами некоего языка.',
+                'Программа, которую по традиции называют «Hello, world!», очень проста. '
+                + 'Она выводит куда-либо фразу «Hello, world!», или другую подобную, средствами некоего языка.',
             ],
         },
     ],
