@@ -53,6 +53,7 @@ export default {
     moduleNameMapper: {
         '\\.(s?css)$': 'identity-obj-proxy',
         '\\.svg': path.resolve(__dirname, 'jestEmptyComponent.tsx'),
+        '^@/(.*)$': '<rootDir>/src/$1',
     },
     // Шаблоны glob, которые Jest использует для обнаружения тестовых файлов
     testMatch: [
