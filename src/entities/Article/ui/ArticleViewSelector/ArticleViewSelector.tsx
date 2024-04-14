@@ -1,11 +1,11 @@
-import ListIcon from 'shared/assets/icons/bi_list.svg';
-import TiledIcon from 'shared/assets/icons/fe_tiled.svg';
-import { classNames } from 'shared/lib/classNames/classNames';
+import ListIcon from '@/shared/assets/icons/bi_list.svg';
+import TiledIcon from '@/shared/assets/icons/fe_tiled.svg';
+import { classNames } from '@/shared/lib/classNames/classNames';
 import {
     Button,
     ButtonTheme,
-} from 'shared/ui/Button/Button';
-import { Icon } from 'shared/ui/Icon/Icon';
+} from '@/shared/ui/Button/Button';
+import { Icon } from '@/shared/ui/Icon/Icon';
 
 import { ArticleView } from '../../model/consts/consts';
 

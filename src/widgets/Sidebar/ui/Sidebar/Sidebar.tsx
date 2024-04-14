@@ -1,15 +1,15 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 
-import { classNames } from 'shared/lib/classNames/classNames';
+import { classNames } from '@/shared/lib/classNames/classNames';
 import {
     Button,
     ButtonSize,
     ButtonTheme,
-} from 'shared/ui/Button/Button';
-import { VStack } from 'shared/ui/Stack';
-import { LangSwitcher } from 'widgets/LangSwitcher/LangSwitcher';
-import { ThemeSwitcher } from 'widgets/ThemeSwitcher';
+} from '@/shared/ui/Button/Button';
+import { VStack } from '@/shared/ui/Stack';
+import { LangSwitcher } from '@/widgets/LangSwitcher/LangSwitcher';
+import { ThemeSwitcher } from '@/widgets/ThemeSwitcher';
 
 import { getSidebarItems } from '../../model/selector/getSidebarItems';
 import { SidebarItem } from '../SidebarItem/SidebarItem';

@@ -1,6 +1,6 @@
 import { screen } from '@testing-library/react';
 
-import { ComponentRender } from 'shared/config/tests/ComponentRender';
+import { ComponentRender } from '@/shared/config/tests/ComponentRender';
 
 import { Counter } from './Counter';
 

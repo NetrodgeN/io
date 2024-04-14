@@ -1,6 +1,6 @@
+import { StateSchema } from '@/app/providers/StoreProvider';
 import { AsyncThunkAction } from '@reduxjs/toolkit';
 
-import { StateSchema } from 'app/providers/StoreProvider';
 import axios, { AxiosStatic } from 'axios';
 
 type ActionCreatorType<Return, Arg, RejectedValue> = (
