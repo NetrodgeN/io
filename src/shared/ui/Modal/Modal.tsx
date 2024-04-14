@@ -1,7 +1,11 @@
 import React from 'react';
 
-import { classNames, Mods } from 'shared/lib/classNames/classNames';
+import {
+    classNames,
+    Mods,
+} from 'shared/lib/classNames/classNames';
 
+import { Overlay } from '../Overlay/Overlay';
 import { Portal } from '../Portal/Portal';
 
 import cls from './Modal.module.scss';
@@ -82,16 +86,11 @@ export const Modal = ({
                     )
                 }
             >
+                <Overlay onClick={closeHandler} />
                 <div
-                    className={cls.overlay}
-                    onClick={closeHandler}
+                    className={cls.content}
                 >
-                    <div
-                        className={cls.content}
-                        onClick={onContentClick}
-                    >
-                        {children}
-                    </div>
+                    {children}
                 </div>
             </div>
         </Portal>

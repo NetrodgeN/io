@@ -27,7 +27,9 @@
     --sidebar-width-collapsed: 100px;
 
     // z-Индексы
-    --modal-z-index: 10;
+    --modal-z-index: 1000;
+    --sidebar-z-index: 9;
+    --drawer-z-index: 10000;
 
     // Цвета
     --overlay-color: rgba(0 0 0 / 60%);
