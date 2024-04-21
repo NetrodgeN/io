@@ -10,7 +10,7 @@ const mock = {
 };
 
 const meta: Meta<typeof NotificationList> = {
-    title: 'entities/NotificationList',
+    title: 'entities/Notification/NotificationList',
     component: NotificationList,
     decorators: [StoreDecorator({})],
     parameters: {

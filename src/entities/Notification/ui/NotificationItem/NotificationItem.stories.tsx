@@ -4,7 +4,7 @@ import { NotificationItem } from './NotificationItem';
 import { Notification } from '../../model/types/notifications';
 
 const meta: Meta<typeof NotificationItem> = {
-    title: 'entities/NotificationItem',
+    title: 'entities/Notification/NotificationItem',
     component: NotificationItem,
 };
 

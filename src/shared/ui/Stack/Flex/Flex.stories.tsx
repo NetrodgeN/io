@@ -8,11 +8,8 @@ import {
 import { Flex } from './Flex';
 
 const meta: Meta<typeof Flex> = {
-    title: 'shared/Flex',
+    title: 'shared/Stack/Flex',
     component: Flex,
-    argTypes: {
-        // backgroundColor: { control: 'color' },
-    },
 };
 export default meta;
 type Story = StoryObj<typeof Flex>
