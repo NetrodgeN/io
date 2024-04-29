@@ -2,7 +2,8 @@ import React from 'react';
 
 import Star from '@/shared/assets/icons/star.svg';
 import { classNames } from '@/shared/lib/classNames/classNames';
-import { Icon } from '@/shared/ui/Icon/Icon';
+
+import { Icon } from '../Icon/Icon';
 
 import cls from './StarRating.module.scss';
 

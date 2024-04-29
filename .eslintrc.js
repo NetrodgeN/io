@@ -121,7 +121,7 @@ module.exports = {
                 order: 'asc',
             },
         }],
-        'netrodgen-project/path-checker': 'error',
+        'netrodgen-project/path-checker': ['error', {alias: '@'}],
     },
     globals: {
         __IS_DEV__: true,

@@ -27,7 +27,7 @@ export const Card = React.memo((props: CardProps) => {
 
     return (
         <div
-            className={classNames(cls.Card, {[cls.max]: max}, [className, cls[theme]])}
+            className={classNames(cls.Card, { [cls.max]: max }, [className, cls[theme]])}
             {...otherProps}
         >
             {children}

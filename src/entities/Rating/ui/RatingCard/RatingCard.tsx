@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next';
 
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { Button, ButtonTheme } from '@/shared/ui/Button/Button';
+import { Card } from '@/shared/ui/Card/Card';
 import { Drawer } from '@/shared/ui/Drawer/Drawer';
 import { Input } from '@/shared/ui/Input/Input';
 import { Modal } from '@/shared/ui/Modal/Modal';
@@ -12,7 +13,6 @@ import { StarRating } from '@/shared/ui/StarRating/StarRating';
 import { Text } from '@/shared/ui/Text/Text';
 
 import cls from './RatingCard.module.scss';
-import { Card } from "@/shared/ui/Card/Card";
 
 interface RatingCardProps {
     className?: string;
