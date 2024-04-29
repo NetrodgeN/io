@@ -25,7 +25,7 @@ module.exports = {
         '@typescript-eslint',
         'i18next',
         'react-hooks',
-        'netrodgen-project',
+        'ulbi-tv-plugin',
     ],
     rules: {
     // 2 - это warning, identMode 4 - отступ равен 4 пробелам
@@ -121,7 +121,8 @@ module.exports = {
                 order: 'asc',
             },
         }],
-        'netrodgen-project/path-checker': ['error', {alias: '@'}],
+        'ulbi-tv-plugin/path-checker': ['error', {alias: '@'}],
+        'ulbi-tv-plugin/public-api-imports': ['error', {alias: '@'}],
     },
     globals: {
         __IS_DEV__: true,
@@ -133,7 +134,7 @@ module.exports = {
         rules: {
             'i18next/no-literal-string': 'off',
             'max-len': 'off',
-            'netrodgen-project/path-checker': 'off',
+            'ulbi-tv-plugin/path-checker': 'off',
             'import/order': 'off',
         },
     }],

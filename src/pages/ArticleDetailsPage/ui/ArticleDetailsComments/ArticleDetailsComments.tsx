@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { useDispatch, useSelector } from 'react-redux';
 
 import { CommentList } from '@/entities/Comment';
-import AddCommentForm from '@/features/addCommentForm/ui/AddCommentForm/AddCommentForm';
+import { AddCommentFormAsync } from '@/features/addCommentForm';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { useInitialEffect } from '@/shared/lib/hooks/useInitialEffect/useInitialEffect';
 import { Loader } from '@/shared/ui/Loader/Loader';
@@ -45,7 +45,7 @@ export const ArticleDetailsComments = memo((props: ArticleDetailsCommentsProps) 
             />
             {/* // TODO: Добавить скелетон} */}
             <Suspense fallback={<Loader />}>
-                <AddCommentForm onSendComment={onSendComment} />
+                <AddCommentFormAsync onSendComment={onSendComment} />
             </Suspense>
             <CommentList
                 isLoading={commentsIsLoading}

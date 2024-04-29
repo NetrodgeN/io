@@ -3,8 +3,7 @@ import { Article } from '../types/article';
 import { ArticleDetailsSchema } from '../types/articleDetailsSchema';
 
 import { articleDetailsReducer } from './articleDetailsSlice';
-import { ArticleType } from '@/entities/Article';
-import { ArticleBlockType } from '@/entities/Article/model/consts/consts';
+import { ArticleType, ArticleBlockType } from '@/entities/Article';
 
 const data: Article = {
     id: '1',
