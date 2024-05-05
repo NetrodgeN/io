@@ -6,7 +6,6 @@ import { getUserAuthData } from '@/entities/User';
 import { LoginModal } from '@/features/AuthByUserName';
 import { AvatarDropdown } from '@/features/avatarDropdown';
 import { NotificationButton } from '@/features/notificationButton';
-import { RoutePath } from '@/shared/config/routeConfig/routeConfig';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import {
     AppLink,
@@ -23,6 +22,7 @@ import {
 } from '@/shared/ui/Text/Text';
 
 import cls from './Navbar.module.scss';
+import { RoutePath } from "@/shared/const/router";
 
 interface NavbarProps {
     className?: string;
