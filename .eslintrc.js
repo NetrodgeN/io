@@ -26,6 +26,7 @@ module.exports = {
         'i18next',
         'react-hooks',
         'ulbi-tv-plugin',
+        'unused-imports',
     ],
     rules: {
     // 2 - это warning, identMode 4 - отступ равен 4 пробелам
@@ -130,6 +131,7 @@ module.exports = {
             alias: '@',
             ignoreImportPatterns: ['**/StoreProvider', '**/testing'],
         }],
+        'unused-imports/no-unused-imports': 'error',
     },
     globals: {
         __IS_DEV__: true,
