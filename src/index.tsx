@@ -2,7 +2,7 @@ import { BrowserRouter } from 'react-router-dom';
 
 import { ErrorBoundary } from '@/app/providers/ErrorBoundary';
 import { StoreProvider } from '@/app/providers/StoreProvider';
-import { ThemeProvider } from '@/app/providers/ThemePropvider';
+import { ThemeProvider } from '@/app/providers/ThemeProvider';
 
 import { createRoot } from 'react-dom/client';
 
@@ -27,3 +27,4 @@ root.render(
         </StoreProvider>
     </BrowserRouter>,
 );
+export { Theme } from '@/shared/const/theme';

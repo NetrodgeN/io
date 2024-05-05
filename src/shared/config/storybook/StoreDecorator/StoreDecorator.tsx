@@ -5,6 +5,7 @@ import {
     StoreProvider,
 } from '@/app/providers/StoreProvider';
 import { articleDetailsReducer } from '@/entities/Article/testing';
+// eslint-disable-next-line ulbi-tv-plugin/layer-imports
 import { userReducer } from '@/entities/User';
 import { loginReducer } from '@/features/AuthByUserName/testing';
 import { addCommentFormReducer } from '@/features/addCommentForm/testing';

@@ -1,9 +1,9 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { Theme } from '../../../../app/providers/ThemePropvider';
 import { ThemeDecorator } from '../../../../shared/config/storybook/ThemeDecorator/ThemeDecorator';
 
 import { CommentList } from './CommentList';
+import { Theme } from '../../../../shared/const/theme';
 
 const meta: Meta<typeof CommentList> = {
     title: 'features/CommentList',

@@ -4,13 +4,12 @@ import {
     Routes,
 } from 'react-router-dom';
 
-import {
-    routeConfig,
-} from '@/app/providers/router/config/routeConfig';
+import { AppRoutesProps } from '@/shared/types/router';
 import { PageLoader } from '@/widgets/PageLoader';
 
+import { routeConfig } from '../config/routeConfig';
+
 import { RequireAuth } from './RequireAuth';
-import { AppRoutesProps } from "@/shared/types/router";
 
 export const AppRouter = React.memo(() => {
     const renderWithWrapper = React.useCallback((route: AppRoutesProps) => {

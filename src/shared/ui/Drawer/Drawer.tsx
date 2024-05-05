@@ -1,11 +1,11 @@
 import React from 'react';
 
-import { useTheme } from '@/app/providers/ThemePropvider';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import {
     AnimationProvider,
     useAnimationLibs,
 } from '@/shared/lib/components/AnimationProvider';
+import { useTheme } from '@/shared/lib/hooks/useTheme/useTheme';
 
 import { Overlay } from '../Overlay/Overlay';
 import { Portal } from '../Portal/Portal';

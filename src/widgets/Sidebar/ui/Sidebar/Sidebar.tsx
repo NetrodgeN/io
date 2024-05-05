@@ -8,9 +8,9 @@ import {
     ButtonTheme,
 } from '@/shared/ui/Button/Button';
 import { VStack } from '@/shared/ui/Stack';
-import { LangSwitcher } from '@/widgets/LangSwitcher';
-import { ThemeSwitcher } from '@/widgets/ThemeSwitcher';
 
+import { LangSwitcher } from '../../../../features/LangSwitcher';
+import { ThemeSwitcher } from '../../../../features/ThemeSwitcher';
 import { getSidebarItems } from '../../model/selector/getSidebarItems';
 import { SidebarItem } from '../SidebarItem/SidebarItem';
 

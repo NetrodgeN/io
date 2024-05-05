@@ -1,7 +1,3 @@
-import {
-    StateSchema,
-    ThunkExtraArg,
-} from '@/app/providers/StoreProvider/config/StateSchema';
 import { counterReducer } from '@/entities/Counter';
 import { userReducer } from '@/entities/User';
 import { scrollSaveReducer } from '@/features/ScrollSave';
@@ -14,6 +10,10 @@ import {
     ReducersMapObject,
 } from '@reduxjs/toolkit';
 
+import {
+    StateSchema,
+    ThunkExtraArg,
+} from './StateSchema';
 import { createReducerManager } from './reducerManager';
 
 export function createReduxStore(

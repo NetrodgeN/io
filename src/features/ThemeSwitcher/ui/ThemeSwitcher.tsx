@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { useTheme } from '@/app/providers/ThemePropvider';
 import { classNames } from '@/shared/lib/classNames/classNames';
+import { useTheme } from '@/shared/lib/hooks/useTheme/useTheme';
 import { Button, ButtonSize, ButtonTheme } from '@/shared/ui/Button/Button';
 // TODO: need refactoring
 export const ThemeSwitcher = React.memo(() => {
