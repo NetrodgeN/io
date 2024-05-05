@@ -4,8 +4,8 @@ import { classNames } from '@/shared/lib/classNames/classNames';
 import {
     Button,
     ButtonTheme,
-} from '@/shared/ui/Button/Button';
-import { Icon } from '@/shared/ui/Icon/Icon';
+} from '@/shared/ui/Button';
+import { Icon } from '@/shared/ui/Icon';
 
 import { ArticleView } from '../../model/consts/consts';
 
