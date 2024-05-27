@@ -10,6 +10,7 @@ export const buildBabelLoader = (options: BuildBabelLoaderProps) => {
         isDev,
         isTsx,
     } = options;
+    const isProd = !isDev;
 
     return {
         test: isTsx ? /\.m?(jsx|tsx)$/ : /\.m?(js|ts)$/,
@@ -17,6 +18,7 @@ export const buildBabelLoader = (options: BuildBabelLoaderProps) => {
         use: {
             loader: 'babel-loader',
             options: {
+                cacheDirectory: true,
                 presets: ['@babel/preset-env'],
                 plugins: [
                     ['@babel/plugin-transform-typescript',
@@ -25,7 +27,7 @@ export const buildBabelLoader = (options: BuildBabelLoaderProps) => {
                         },
                     ],
                     '@babel/plugin-transform-runtime',
-                    isTsx && [
+                    isTsx && isProd && [
                         babelRemovePropsPlugin,
                         { props: ['data-testid'] },
                     ],
