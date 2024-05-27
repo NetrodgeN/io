@@ -1,11 +1,10 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 
+import { ArticleSortField } from '@/entities/Article';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { SortOrder } from '@/shared/types/sort/sort';
 import { Select, SelectOption } from '@/shared/ui/Select';
-
-import { ArticleSortField } from '../../model/consts/consts';
 
 import cls from './ArticleSortSelector.module.scss';
 
