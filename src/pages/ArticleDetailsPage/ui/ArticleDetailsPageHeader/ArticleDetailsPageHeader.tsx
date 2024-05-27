@@ -4,10 +4,15 @@ import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 
 import { getArticleDetailsData } from '@/entities/Article';
-import { getUserAuthData } from '@/entities/User';
-import { RoutePath } from '@/shared/const/router';
+import {
+    getRouteArticleEdit,
+    getRouteArticles,
+} from '@/shared/const/router';
 import { classNames } from '@/shared/lib/classNames/classNames';
-import { Button, ButtonTheme } from '@/shared/ui/Button';
+import {
+    Button,
+    ButtonTheme,
+} from '@/shared/ui/Button';
 import { HStack } from '@/shared/ui/Stack';
 
 import { getCanEditArticle } from '../../model/selectors/article';
@@ -25,16 +30,16 @@ export const ArticleDetailsPageHeader = React.memo((props: ArticleDetailsPageHea
 
     const { t } = useTranslation('article-details');
     const navigate = useNavigate();
-    const userData = useSelector(getUserAuthData);
     const article = useSelector(getArticleDetailsData);
     const canEdit = useSelector(getCanEditArticle);
 
     const onBackToList = React.useCallback(() => {
-        navigate(RoutePath.articles);
+        navigate(getRouteArticles());
     }, [navigate]);
 
     const onEditArticle = React.useCallback(() => {
-        navigate(`${RoutePath.article_details}${article?.id}/edit`);
+        navigate(getRouteArticleEdit(article!.id));
+        // eslint-disable-next-line
     }, [article?.id, navigate]);
 
     return (

@@ -13,19 +13,8 @@ const preview: Preview = {
                 date: /Date$/i,
             },
         },
-        layout: 'fullscreen'
+        layout: 'fullscreen',
     },
-    // globalTypes: {
-    //     theme: {
-    //         description: 'Global theme for components',
-    //         defaultValue: 'side-by-side',
-    //         toolbar: {
-    //             title: 'Global theme',
-    //             items: [Theme.LIGHT, Theme.DARK, 'side-by-side'],
-    //             dynamicTitle: true,
-    //         },
-    //     },
-    // },
     decorators: [RouterDecorator, SuspenseDecorator],
 };
 
