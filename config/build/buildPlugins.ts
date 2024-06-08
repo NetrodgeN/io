@@ -42,6 +42,7 @@ export function buildPlugins({
     if (isDev) {
         plugins.push(new ReactRefreshPlugin());
         plugins.push(new webpack.HotModuleReplacementPlugin());
+        // @ts-ignore
         plugins.push(new BundleAnalyzerPlugin({
             openAnalyzer: false,
         }));
